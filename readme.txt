@@ -8,3 +8,12 @@
 8 在前台控制器文件夹中 创建前台通用包含文件 index/basic.func.php
 9 在模板文件夹中  创建模板前台文件夹 templates/default/index
 10 在前台模板文件夹中创建首页模板 templates/default/index/index.php
+11 在basic.func.php中
+    （1）创建全局变量 $globals $smarty
+	（2）声明主方法main方法 并在main方法中 引用自定义控制器方法controller
+	（3）通过 set_more_global 方法 得到当前页的相关全局变量
+12 在通用方法文件中
+	（1）声明set_global方法来设置全局变量数组
+	（2）声明get_global(a,b)方法,声明一个全局数组$globals,通过判断是否存在此全局变量$globals[a]，有则使用，没有就默认定义$globals[a]=b
+13 
+	

@@ -31,7 +31,7 @@ function set_global($filter = 'strict')
 	global $global;
 	$global = array();
 	$global['url'] = $filter($_SERVER['QUERY_STRING']);
-	//例如：  http://weaimy.com/?
+	//例如：  http://weaimy.com/?/article/id-53/index.html
 	//$_SERVER['QUERY_STRING'] = /article/id-53/index.html
 	if($global['url'] != '')
 	{
@@ -61,6 +61,13 @@ function set_global($filter = 'strict')
 			}
 		}
 	}
+}
+
+//获取全局变量值
+function get_global($key,$val = '')
+{
+	global $global;
+	return isset($global[$key]) ? $global[$key] : $val;
 }
 
 //获取post

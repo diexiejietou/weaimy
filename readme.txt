@@ -15,5 +15,10 @@
 12 在通用方法文件中
 	（1）声明set_global方法来设置全局变量数组
 	（2）声明get_global(a,b)方法,声明一个全局数组$globals,通过判断是否存在此全局变量$globals[a]，有则使用，没有就默认定义$globals[a]=b
-13 
+13 通过通用方法中的controller方法 引入首页控制文件index.php
+14 在首页控制文件 index.php 中引入smarty和common.func.php文件
+15 在common.func.php文件中定义三个方法
+	（1）set_smarty 声明全局变量$smarty 并设置smarty的相关路径 模板路径 编译路径 缓存路径
+	（2）initial 定义模板中的数据及变量
+	（3）creathtml 静态文件生成
 	
